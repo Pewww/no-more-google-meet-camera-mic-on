@@ -1,0 +1,22 @@
+{
+  "name": "No-More-Google-Meet-Camera-Mic-On",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "구글 밋에 처음 접속할 때 카메라와 마이크가 켜지지 않도록 방지하는 크롬 익스텐션",
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://meet.google.com/*"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ]
+}
